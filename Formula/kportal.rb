@@ -5,23 +5,23 @@
 class Kportal < Formula
   desc "Modern Kubernetes port-forward manager with interactive TUI"
   homepage "https://lukaszraczylo.github.io/kportal"
-  version "0.2.21"
+  version "0.2.24"
   license "MIT"
 
   depends_on "kubernetes-cli" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lukaszraczylo/kportal/releases/download/v0.2.21/kportal-0.2.21-darwin-amd64.tar.gz"
-      sha256 "af52c7a41e95299c1e9ae0bd3d685402580e0f8e43558a0a92e757f6d5503238"
+      url "https://github.com/lukaszraczylo/kportal/releases/download/v0.2.24/kportal-0.2.24-darwin-amd64.tar.gz"
+      sha256 "a9cb44f0881ffedfc9c48706268c165b748b4fa93a077a4869c988b7da143c95"
 
       def install
         bin.install "kportal"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lukaszraczylo/kportal/releases/download/v0.2.21/kportal-0.2.21-darwin-arm64.tar.gz"
-      sha256 "2d880e5ab009521f74d6019b1a83b4bb182aca79da34ba8a3a2fe20d8e81d520"
+      url "https://github.com/lukaszraczylo/kportal/releases/download/v0.2.24/kportal-0.2.24-darwin-arm64.tar.gz"
+      sha256 "c9819d9b7a4566085d0c67145af84cb3ff72651f19574d1cc21516d9dbe0baea"
 
       def install
         bin.install "kportal"
@@ -31,15 +31,15 @@ class Kportal < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lukaszraczylo/kportal/releases/download/v0.2.21/kportal-0.2.21-linux-amd64.tar.gz"
-      sha256 "91a8f1ea4c7f17239d8f077bd2a0b874cbebf784f48830c214914bcea24cb722"
+      url "https://github.com/lukaszraczylo/kportal/releases/download/v0.2.24/kportal-0.2.24-linux-amd64.tar.gz"
+      sha256 "f23f68ffdcffe747f021ae2b051c9510eb0f94e2f4a1a42758b60208f3f482d9"
       def install
         bin.install "kportal"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lukaszraczylo/kportal/releases/download/v0.2.21/kportal-0.2.21-linux-arm64.tar.gz"
-      sha256 "97b695897eab3456d2cb22f601229b2b9b87ec7f846c01ae8c669f3eabbd5bf6"
+      url "https://github.com/lukaszraczylo/kportal/releases/download/v0.2.24/kportal-0.2.24-linux-arm64.tar.gz"
+      sha256 "ed133d7ada0a41927be9a3a4d9a2365495f97ee0fb7876d371f6ebc200572ab9"
       def install
         bin.install "kportal"
       end
