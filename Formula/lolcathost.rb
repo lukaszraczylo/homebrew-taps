@@ -5,21 +5,21 @@
 class Lolcathost < Formula
   desc "Dynamic host management tool for macOS and Linux with TUI"
   homepage "https://github.com/lukaszraczylo/lolcathost"
-  version "0.1.5"
+  version "0.1.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lukaszraczylo/lolcathost/releases/download/v0.1.5/lolcathost-0.1.5-darwin-amd64.tar.gz"
-      sha256 "58eeb7c7a804c078a4d698d9515ad423a9998ea9ddca577d8877f0dc8b21159d"
+      url "https://github.com/lukaszraczylo/lolcathost/releases/download/v0.1.6/lolcathost-0.1.6-darwin-amd64.tar.gz"
+      sha256 "d07a6356871360e1a53c3a5c587b213857b26b867e3d9c1a2967d1c69d30e007"
 
       def install
         bin.install "lolcathost"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lukaszraczylo/lolcathost/releases/download/v0.1.5/lolcathost-0.1.5-darwin-arm64.tar.gz"
-      sha256 "ecad5d408c4110e79b2c0f0e602429824d34798d1a49aa88c2a3352631d2a99e"
+      url "https://github.com/lukaszraczylo/lolcathost/releases/download/v0.1.6/lolcathost-0.1.6-darwin-arm64.tar.gz"
+      sha256 "7c822ee6bd80c2401fefc4f593b2d35c19cf7ab056baecb2e26354114f0cfae6"
 
       def install
         bin.install "lolcathost"
@@ -29,15 +29,15 @@ class Lolcathost < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lukaszraczylo/lolcathost/releases/download/v0.1.5/lolcathost-0.1.5-linux-amd64.tar.gz"
-      sha256 "5baa4e6f75f9b688aac5d7d41afd76667601128bce680b5d2220e222a200fc45"
+      url "https://github.com/lukaszraczylo/lolcathost/releases/download/v0.1.6/lolcathost-0.1.6-linux-amd64.tar.gz"
+      sha256 "38e9e726b029533aad577434ccd34a1e5b8581eb7572bef8879498bdd6fd1d90"
       def install
         bin.install "lolcathost"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lukaszraczylo/lolcathost/releases/download/v0.1.5/lolcathost-0.1.5-linux-arm64.tar.gz"
-      sha256 "989b8ee8eeadd31c2a6f2d1be582fa8e605ffb7bdfc7105bcd362fe6adc34a43"
+      url "https://github.com/lukaszraczylo/lolcathost/releases/download/v0.1.6/lolcathost-0.1.6-linux-arm64.tar.gz"
+      sha256 "b58eee16a55bfb42a70a2a1b8bfce8716f5c33cafebb1c3d0eee1e6866e1450e"
       def install
         bin.install "lolcathost"
       end
