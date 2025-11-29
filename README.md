@@ -9,7 +9,7 @@ Or `brew tap lukaszraczylo/homebrew-taps` and then `brew install <formula>`.
 Or, in a `brew bundle` `Brewfile`:
 
 ```ruby
-tap "lukaszraczylo/brew-taps"
+tap "lukaszraczylo/homebrew-taps"
 brew "<formula>"
 ```
 
