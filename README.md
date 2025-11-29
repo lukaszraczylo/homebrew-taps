@@ -2,7 +2,7 @@
 
 ## How do I install these formulae?
 
-`brew install lukaszraczylo/brew-taps/<formula>`
+`brew install lukaszraczylo/homebrew-taps/<formula>`
 
 Or `brew tap lukaszraczylo/brew-taps` and then `brew install <formula>`.
 
