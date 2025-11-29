@@ -4,7 +4,7 @@
 
 `brew install lukaszraczylo/homebrew-taps/<formula>`
 
-Or `brew tap lukaszraczylo/brew-taps` and then `brew install <formula>`.
+Or `brew tap lukaszraczylo/homebrew-taps` and then `brew install <formula>`.
 
 Or, in a `brew bundle` `Brewfile`:
 
