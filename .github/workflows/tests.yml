@@ -36,6 +36,9 @@ jobs:
       - run: brew test-bot --only-setup
         continue-on-error: true
 
+      - name: Fix style issues from GoReleaser-generated files
+        run: brew style --fix lukaszraczylo/taps || true
+
       - run: brew test-bot --only-tap-syntax
       - run: brew test-bot --only-formulae
         if: github.event_name == 'pull_request'
