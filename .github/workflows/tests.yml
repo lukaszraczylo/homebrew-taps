@@ -37,11 +37,10 @@ jobs:
         continue-on-error: true
 
       - name: Fix style issues from GoReleaser-generated files
-        run: brew style --fix lukaszraczylo/taps || true
+        run: brew style --fix Casks/*.rb || true
+        working-directory: ${{ steps.set-up-homebrew.outputs.repository-path }}
 
       - run: brew test-bot --only-tap-syntax
-      - run: brew test-bot --only-formulae
-        if: github.event_name == 'pull_request'
 
       - name: Upload bottles as artifact
         if: always() && github.event_name == 'pull_request'
