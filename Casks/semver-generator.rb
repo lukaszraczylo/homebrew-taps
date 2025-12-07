@@ -3,7 +3,7 @@ cask "semver-generator" do
   name "semver-generator"
   desc "Automatic semantic version generator based on git commit messages"
   homepage "https://github.com/lukaszraczylo/semver-generator"
-  version "1.15.352"
+  version "1.15.358"
 
   livecheck do
     skip "Auto-generated on release."
@@ -13,34 +13,34 @@ cask "semver-generator" do
 
   on_macos do
     on_intel do
-      url "https://github.com/lukaszraczylo/semver-generator/releases/download/v#{version}/semver-gen-darwin-amd64.tar.gz",
+      url "https://github.com/lukaszraczylo/semver-generator/releases/download/v#{version}/semver-generator-darwin-amd64.tar.gz",
         verified: "github.com/lukaszraczylo/semver-generator"
-      sha256 "18e13b35299f70f6d73e3fcac376108e16b7f11e469636d12b88431720f3149e"
+      sha256 "ed6ba88f09de524e4d94cab8f3b8c727ad4128847b3d28047f257c873abc17b8"
     end
     on_arm do
-      url "https://github.com/lukaszraczylo/semver-generator/releases/download/v#{version}/semver-gen-darwin-arm64.tar.gz",
+      url "https://github.com/lukaszraczylo/semver-generator/releases/download/v#{version}/semver-generator-darwin-arm64.tar.gz",
         verified: "github.com/lukaszraczylo/semver-generator"
-      sha256 "a3a70df55d84aecba003f46006699184e8a92916a43dd20e281ae63a23dec95a"
+      sha256 "ac43ca412e3697456041ee037720a490dbf9493834518c9770b9464c549dd279"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/lukaszraczylo/semver-generator/releases/download/v#{version}/semver-gen-linux-amd64.tar.gz",
+      url "https://github.com/lukaszraczylo/semver-generator/releases/download/v#{version}/semver-generator-linux-amd64.tar.gz",
         verified: "github.com/lukaszraczylo/semver-generator"
-      sha256 "3114d321604d3b6d56b33485d18071341ae2090a3e997bd2599140133f15c425"
+      sha256 "758ddc47d0f17cda1ed3c87db8d990db17f093bbc617f37d5fbd9b56f8aa1554"
     end
     on_arm do
-      url "https://github.com/lukaszraczylo/semver-generator/releases/download/v#{version}/semver-gen-linux-arm64.tar.gz",
+      url "https://github.com/lukaszraczylo/semver-generator/releases/download/v#{version}/semver-generator-linux-arm64.tar.gz",
         verified: "github.com/lukaszraczylo/semver-generator"
-      sha256 "6ca41ea83dadc38069731740c1b624a0046e25ddc98f496bbe2109b1a0b48258"
+      sha256 "22cab923cd385e42a13636074e5b3384020f31759a370c282df7bb72cdef87d0"
     end
   end
 
   postflight do
     if OS.mac?
       system_command "/usr/bin/xattr",
-                     args: ["-dr", "com.apple.quarantine", "#{staged_path}/semver-gen"]
+                     args: ["-dr", "com.apple.quarantine", "#{staged_path}/semver-generator"]
     end
   end
 
