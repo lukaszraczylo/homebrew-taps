@@ -1,0 +1,3 @@
+# Disable shellcheck for non-tap scripts
+# These are utility scripts not part of homebrew tap functionality
+disable=SC2311,SC2312

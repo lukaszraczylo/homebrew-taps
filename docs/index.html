@@ -65,6 +65,34 @@
             .shadow-modern { box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1); }
             .dark .shadow-modern { box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.4); }
             html { scroll-behavior: smooth; }
+            .code-block {
+                position: relative;
+            }
+            .copy-btn {
+                position: absolute;
+                top: 0.5rem;
+                right: 0.5rem;
+                padding: 0.25rem 0.5rem;
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 0.375rem;
+                color: #9ca3af;
+                font-size: 0.75rem;
+                cursor: pointer;
+                transition: all 0.2s;
+                display: flex;
+                align-items: center;
+                gap: 0.25rem;
+            }
+            .copy-btn:hover {
+                background: rgba(255, 255, 255, 0.2);
+                color: #fff;
+            }
+            .copy-btn.copied {
+                background: rgba(16, 185, 129, 0.3);
+                border-color: rgba(16, 185, 129, 0.5);
+                color: #34d399;
+            }
         </style>
         <script>
             if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
@@ -123,7 +151,7 @@
                         <i class="fas fa-beer text-8xl sm:text-9xl text-amber-500 animate-float"></i>
                     </div>
                     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-4 sm:mb-6 leading-tight animate-fade-in-up" style="animation-delay: 0.1s;">
-                        Homebrew<br /><span class="gradient-text">Tap</span>
+                        Homebrew Tap<br /><span class="gradient-text">at raczylo.com</span>
                     </h1>
                     <p class="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-4 animate-fade-in-up" style="animation-delay: 0.2s;">
                         Developer tools for macOS and Linux. Install powerful CLI utilities with a single command.
@@ -158,7 +186,7 @@
                             </div>
                             <div class="flex-1">
                                 <h3 class="font-bold text-gray-900 dark:text-gray-100 text-lg">kportal</h3>
-                                <span class="text-xs text-gray-500 dark:text-gray-400">v0.2.46</span>
+                                <span class="text-xs text-gray-500 dark:text-gray-400">v0.2.48</span>
                             </div>
                         </div>
                         <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Modern Kubernetes port-forward manager with interactive TUI</p>
@@ -174,7 +202,67 @@
                                 <i class="fab fa-github mr-1"></i>GitHub
                             </a>
                         </div>
-                        <pre class="mt-4 bg-gray-900 text-gray-100 p-3 rounded-lg text-xs overflow-x-auto"><code>brew install --cask lukaszraczylo/taps/kportal</code></pre>
+                        <div class="code-block mt-4">
+                            <pre class="bg-gray-900 text-gray-100 p-3 pr-16 rounded-lg text-xs overflow-x-auto"><code>brew install --cask lukaszraczylo/taps/kportal</code></pre>
+                            <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard"><i class="fas fa-copy"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- lolcathost -->
+                    <div class="glass p-6 rounded-xl group hover:shadow-lg transition-all duration-300">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-cat text-white text-lg"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-gray-900 dark:text-gray-100 text-lg">lolcathost</h3>
+                                <span class="text-xs text-gray-500 dark:text-gray-400">v0.1.22</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Dynamic host management tool with TUI</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 rounded text-xs">Hosts</span>
+                            <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded text-xs">TUI</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://lolcathost.raczylo.com" target="_blank" class="flex-1 text-center px-3 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg text-sm font-medium transition-colors">
+                                <i class="fas fa-book mr-1"></i>Docs
+                            </a>
+                            <a href="https://github.com/lukaszraczylo/lolcathost" target="_blank" class="flex-1 text-center px-3 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg text-sm font-medium transition-colors">
+                                <i class="fab fa-github mr-1"></i>GitHub
+                            </a>
+                        </div>
+                        <div class="code-block mt-4">
+                            <pre class="bg-gray-900 text-gray-100 p-3 pr-16 rounded-lg text-xs overflow-x-auto"><code>brew install --cask lukaszraczylo/taps/lolcathost</code></pre>
+                            <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard"><i class="fas fa-copy"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- semver-generator -->
+                    <div class="glass p-6 rounded-xl group hover:shadow-lg transition-all duration-300">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-code-branch text-white text-lg"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-gray-900 dark:text-gray-100 text-lg">semver-generator</h3>
+                                <span class="text-xs text-gray-500 dark:text-gray-400">v1.15.362</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Automatic semantic version generator based on git commit messages</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded text-xs">Git</span>
+                            <span class="px-2 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 rounded text-xs">Versioning</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/lukaszraczylo/semver-generator" target="_blank" class="flex-1 text-center px-3 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg text-sm font-medium transition-colors">
+                                <i class="fab fa-github mr-1"></i>GitHub
+                            </a>
+                        </div>
+                        <div class="code-block mt-4">
+                            <pre class="bg-gray-900 text-gray-100 p-3 pr-16 rounded-lg text-xs overflow-x-auto"><code>brew install --cask lukaszraczylo/taps/semver-generator</code></pre>
+                            <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard"><i class="fas fa-copy"></i></button>
+                        </div>
                     </div>
 
                     <!-- CASKS_END -->
@@ -195,16 +283,25 @@
                             <i class="fas fa-plus-circle mr-2 text-emerald-500"></i>
                             Add the Tap
                         </h3>
-                        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>brew tap lukaszraczylo/taps</code></pre>
+                        <div class="code-block">
+                            <pre class="bg-gray-900 text-gray-100 p-4 pr-20 rounded-lg overflow-x-auto"><code>brew tap lukaszraczylo/taps</code></pre>
+                            <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard"><i class="fas fa-copy"></i></button>
+                        </div>
                     </div>
                     <div class="glass p-6 rounded-xl">
                         <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-3 flex items-center">
                             <i class="fas fa-download mr-2 text-blue-500"></i>
                             Install a Cask
                         </h3>
-                        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>brew install --cask lukaszraczylo/taps/&lt;cask-name&gt;</code></pre>
+                        <div class="code-block">
+                            <pre class="bg-gray-900 text-gray-100 p-4 pr-20 rounded-lg overflow-x-auto"><code>brew install --cask lukaszraczylo/taps/&lt;cask-name&gt;</code></pre>
+                            <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard"><i class="fas fa-copy"></i></button>
+                        </div>
                         <p class="text-sm text-gray-600 dark:text-gray-400 mt-3">Or install directly without tapping first:</p>
-                        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mt-2"><code>brew install --cask lukaszraczylo/taps/kportal</code></pre>
+                        <div class="code-block mt-2">
+                            <pre class="bg-gray-900 text-gray-100 p-4 pr-20 rounded-lg overflow-x-auto"><code>brew install --cask lukaszraczylo/taps/kportal</code></pre>
+                            <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard"><i class="fas fa-copy"></i></button>
+                        </div>
                     </div>
                     <div class="glass p-6 rounded-xl">
                         <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-3 flex items-center">
@@ -212,10 +309,13 @@
                             Using Brewfile
                         </h3>
                         <p class="text-gray-600 dark:text-gray-400 mb-3">Add to your Brewfile:</p>
-                        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>tap "lukaszraczylo/taps"
+                        <div class="code-block">
+                            <pre class="bg-gray-900 text-gray-100 p-4 pr-20 rounded-lg overflow-x-auto"><code>tap "lukaszraczylo/taps"
 cask "kportal"
 cask "lolcathost"
 cask "semver-generator"</code></pre>
+                            <button class="copy-btn" onclick="copyCode(this)" title="Copy to clipboard"><i class="fas fa-copy"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -241,6 +341,24 @@ cask "semver-generator"</code></pre>
         </footer>
 
         <script>
+            // Copy code to clipboard
+            function copyCode(button) {
+                const codeBlock = button.parentElement.querySelector('code');
+                const text = codeBlock.textContent;
+
+                navigator.clipboard.writeText(text).then(() => {
+                    button.classList.add('copied');
+                    button.innerHTML = '<i class="fas fa-check"></i>';
+
+                    setTimeout(() => {
+                        button.classList.remove('copied');
+                        button.innerHTML = '<i class="fas fa-copy"></i>';
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy:', err);
+                });
+            }
+
             // Theme toggle
             document.getElementById('theme-toggle').addEventListener('click', function() {
                 if (document.documentElement.classList.contains('dark')) {
