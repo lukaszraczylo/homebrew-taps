@@ -3,7 +3,7 @@ cask "semver-generator" do
   name "semver-generator"
   desc "Automatic semantic version generator based on git commit messages"
   homepage "https://github.com/lukaszraczylo/semver-generator"
-  version "1.15.365"
+  version "1.16.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "semver-generator" do
   on_macos do
     on_intel do
       url "https://github.com/lukaszraczylo/semver-generator/releases/download/v#{version}/semver-generator-darwin-amd64.tar.gz"
-      sha256 "0f83847ad0e1c1ad0cbc96ff24a246c1657120d73002b0f259e463f10cae89d7"
+      sha256 "4d8da33ddd5f1c02e1568ea435ea1c9610e6c56d45e7eb5b08465f046f420b67"
     end
     on_arm do
       url "https://github.com/lukaszraczylo/semver-generator/releases/download/v#{version}/semver-generator-darwin-arm64.tar.gz"
-      sha256 "67f28c8bcb15fa7c73e8f9bfbfb653b5cf9e38f8e71a62fb7f3c51e584b8bfa0"
+      sha256 "42004bf99e9b9c202a4568d7ca57f8b53f3ad9f5d9672bb50483d511e4168544"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/lukaszraczylo/semver-generator/releases/download/v#{version}/semver-generator-linux-amd64.tar.gz"
-      sha256 "067ffbf2b6b5d58b50a5eb9d1632e543f5b1847f14a6e579e890812813a7bf29"
+      sha256 "567b615860925fb351ea89bb5e3af070d943f8c207d468c73a9ff6dab0c9945b"
     end
     on_arm do
       url "https://github.com/lukaszraczylo/semver-generator/releases/download/v#{version}/semver-generator-linux-arm64.tar.gz"
-      sha256 "2e65c30b5b4ed77cf530cf33b49a545d2da4a2221a43a80f5e929423803e39f0"
+      sha256 "733cf86828337ce176b0cdd6228c28d0369a5811e905f2271013959e3e4e8ea1"
     end
   end
 
