@@ -3,7 +3,7 @@ cask "kportal" do
   name "kportal"
   desc "Modern Kubernetes port-forward manager with interactive TUI"
   homepage "https://lukaszraczylo.github.io/kportal"
-  version "0.2.70"
+  version "0.2.71"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,12 +15,12 @@ cask "kportal" do
     on_intel do
       url "https://github.com/lukaszraczylo/kportal/releases/download/v#{version}/kportal-#{version}-darwin-amd64.tar.gz",
         verified: "github.com/lukaszraczylo/kportal"
-      sha256 "3c7fdfa9cefdc34140bd524ce23e620a1b235956f064156f85f6d097cc3c7328"
+      sha256 "a399b41004ecb16fe2c6f1d0e9966bbbdb123fce9f10b9e390ec569ea47eeb19"
     end
     on_arm do
       url "https://github.com/lukaszraczylo/kportal/releases/download/v#{version}/kportal-#{version}-darwin-arm64.tar.gz",
         verified: "github.com/lukaszraczylo/kportal"
-      sha256 "cc27df47c42d10eaa17a308f8da9417ad43947ebc8126eedd562468b312d7420"
+      sha256 "df0dcb862f4c16923e9e48e7cf026903010f44622fd15ba9be1f0830daed5d55"
     end
   end
 
@@ -28,12 +28,12 @@ cask "kportal" do
     on_intel do
       url "https://github.com/lukaszraczylo/kportal/releases/download/v#{version}/kportal-#{version}-linux-amd64.tar.gz",
         verified: "github.com/lukaszraczylo/kportal"
-      sha256 "94553d380437fc982117292143d477687a9a2de9c4a9ae695ec693721b0ae557"
+      sha256 "bf2ba180198f68d77db711708f1ede557fb0388f08f47775d4f62d4c16d4826f"
     end
     on_arm do
       url "https://github.com/lukaszraczylo/kportal/releases/download/v#{version}/kportal-#{version}-linux-arm64.tar.gz",
         verified: "github.com/lukaszraczylo/kportal"
-      sha256 "14a231d3fdd2191333aaa81ef7a6ae4c7c36043a7db268f6f597f1ed9567314e"
+      sha256 "eaa6f0b7ff67e70182e2a33d8d5b5c5f4ae9d0655e3921081d5bf49265f93ff1"
     end
   end
 
