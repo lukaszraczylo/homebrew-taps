@@ -3,7 +3,7 @@ cask "lolcathost" do
   name "lolcathost"
   desc "Dynamic host management tool with TUI"
   homepage "https://github.com/lukaszraczylo/lolcathost"
-  version "0.1.33"
+  version "0.1.34"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "lolcathost" do
   on_macos do
     on_intel do
       url "https://github.com/lukaszraczylo/lolcathost/releases/download/v#{version}/lolcathost-#{version}-darwin-amd64.tar.gz"
-      sha256 "a702a00dcf9d783a73dd786cde6b3fba7b1f18569277907b26932c093093cd46"
+      sha256 "d5383b5705acfe653ec7a58facdd33dab37670a4dfcc5a8ad59b664dc9d467c7"
     end
     on_arm do
       url "https://github.com/lukaszraczylo/lolcathost/releases/download/v#{version}/lolcathost-#{version}-darwin-arm64.tar.gz"
-      sha256 "4d404a08405761886fd9c8d9fec6af471ad0037b52bb18e354f7122bc10b2b17"
+      sha256 "28246204da2c6ce0f73d8904d1e590d0078351fb85e668b8a35e0c22898c3fb4"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/lukaszraczylo/lolcathost/releases/download/v#{version}/lolcathost-#{version}-linux-amd64.tar.gz"
-      sha256 "7778b69f60e58c0bd0db4c207ccc9454dda9072cc3cbe0ef4bc23901505deeef"
+      sha256 "c642757cbe953895cbf2c8a52691a5eb256e91ca413845029403d63f5445cb1f"
     end
     on_arm do
       url "https://github.com/lukaszraczylo/lolcathost/releases/download/v#{version}/lolcathost-#{version}-linux-arm64.tar.gz"
-      sha256 "45a797a614d37b5427fbe2cad22a3d33e49c5c62ced77925868b073967015dfc"
+      sha256 "197b96706ef897c6e54a06d322d0769de0444cef6bc521d454f9da47bfe96f02"
     end
   end
 
