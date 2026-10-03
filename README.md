@@ -6,8 +6,9 @@ Custom Homebrew tap for macOS and Linux tools by Lukasz Raczylo.
 
 | Cask | Description |
 |------|-------------|
+| [harness-sync](https://github.com/lukaszraczylo/harness-sync) | Sync skills, agents, MCP, and LLM endpoints across multiple LLM harnesses |
 | [kportal](https://github.com/lukaszraczylo/kportal) | Modern Kubernetes port-forward manager with interactive TUI |
-| [lolcathost](https://github.com/lukaszraczylo/lolcathost) | Dynamic hosts file manager with interactive terminal UI |
+| [lolcathost](https://github.com/lukaszraczylo/lolcathost) | Dynamic host management tool with TUI |
 | [semver-generator](https://github.com/lukaszraczylo/semver-generator) | Automatic semantic version generator based on git commit messages |
 
 ## Installation
@@ -36,6 +37,7 @@ Add to your Brewfile:
 
 ```ruby
 tap "lukaszraczylo/taps"
+cask "harness-sync"
 cask "kportal"
 cask "lolcathost"
 cask "semver-generator"
