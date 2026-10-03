@@ -37,7 +37,9 @@ jobs:
         continue-on-error: true
 
       - name: Fix style issues from GoReleaser-generated files
-        run: brew style --fix Casks/*.rb || true
+        run: |
+          scripts/fix-casks.sh
+          brew style --fix Casks/*.rb || true
         working-directory: ${{ steps.set-up-homebrew.outputs.repository-path }}
 
       - run: brew test-bot --only-tap-syntax
