@@ -1,0 +1,34 @@
+name: Fix GoReleaser casks
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'Casks/**'
+      - 'scripts/fix-casks.sh'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix-casks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Rewrite postflight blocks
+        run: scripts/fix-casks.sh
+
+      - name: Commit and push changes
+        run: |
+          if git diff --quiet Casks/; then
+            exit 0
+          fi
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add Casks/
+          git commit -m "fix(casks): rewrite postflight to postflight_steps"
+          git push
